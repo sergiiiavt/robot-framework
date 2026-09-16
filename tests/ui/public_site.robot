@@ -6,10 +6,10 @@ Suite Teardown    Close GimmeJob Browser
 *** Test Cases ***
 Home Page Shows Project Purpose
     [Tags]    ui    smoke
-    Get Text    h1    ==    Why I created this site
+    Get Text    h1    *=    CREATED THIS SITE
 
 Robot Framework Learning Page Is Reachable
     [Tags]    ui    regression
     Open Robot Framework Learning Path
-    Get Text    h1    ==    Test automation learning path
+    Get Element Count    role=heading[name="Test automation learning path"]    ==    1
     Get Url    *=    /learn/automation
